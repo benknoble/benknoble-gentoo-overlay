@@ -1,0 +1,15 @@
+BDEPEND=python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_14? ( dev-lang/python:3.14 )
+DEFINED_PHASES=setup
+DESCRIPTION=Determine when a particular commit was merged into a git branch
+EAPI=8
+HOMEPAGE=https://github.com/mhagger/git-when-merged
+INHERIT=python-single-r1
+IUSE=python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 python_single_target_python3_14
+KEYWORDS=~amd64
+LICENSE=GPL-2+
+RDEPEND=python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_14? ( dev-lang/python:3.14 )
+REQUIRED_USE=^^ ( python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 python_single_target_python3_14 )
+SLOT=0
+SRC_URI=https://github.com/mhagger/git-when-merged/archive/refs/tags/v1.2.1.tar.gz -> git-when-merged-1.2.1.tar.gz
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	python-utils-r1	dbb8c4d794033ad7e7221eaf567a6c90	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57
+_md5_=71dc48c59cf1aea0ff6f3221c8412fc6
