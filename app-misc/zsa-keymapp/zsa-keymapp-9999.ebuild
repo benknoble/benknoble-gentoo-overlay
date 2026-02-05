@@ -11,7 +11,8 @@ SRC_URI="https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar
 
 LICENSE="unknown"
 SLOT="0"
-KEYWORDS="~amd64"
+
+PROPERTIES=live
 
 # The wiki [1] says webkit2gtk4.1 is desired, so explicitly request that slot.
 # Same for gtk+ (v3).
