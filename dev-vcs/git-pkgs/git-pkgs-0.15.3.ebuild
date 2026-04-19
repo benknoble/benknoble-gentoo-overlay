@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+inherit go-module shell-completion
 
 DESCRIPTION="A git subcommand for analyzing dependencies"
 HOMEPAGE="https://git-pkgs.dev/"
@@ -44,13 +44,23 @@ src_compile() {
 	)
 
 	CGO_ENABLED=0 ego build -o git-pkgs -ldflags="${ldflags[*]}" .
+	einfo generating completions
+	./git-pkgs completion bash >bash-completions
+	./git-pkgs completion fish >fish-completions
+	./git-pkgs completion zsh >zsh-completions
 }
 
 src_install() {
 	dobin git-pkgs
+
 	dodoc -r docs
 	if use doc; then
 		doman man/*
 	fi
+
+	newbashcomp bash-completions "${PN}"
+	newfishcomp fish-completions "${PN}".fish
+	newzshcomp zsh-completions "${PN}"
+
 	default
 }
