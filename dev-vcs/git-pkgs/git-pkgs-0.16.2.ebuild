@@ -39,7 +39,7 @@ src_compile() {
 	local ldflags=(
 		-s -w
 		-X github.com/git-pkgs/git-pkgs/cmd.version="${PV}"
-		-X github.com/git-pkgs/git-pkgs/cmd.commit=85f49073e99bce1087786b24c279c0db29b93bf9
+		-X github.com/git-pkgs/git-pkgs/cmd.commit=79854c47522a2a2be8c0c5e7a10e554deb87e1fd
 		-X github.com/git-pkgs/git-pkgs/cmd.date="$(date --rfc-3339=seconds -u | sed 's/ /T/;s/+00:00/Z/')"
 	)
 
