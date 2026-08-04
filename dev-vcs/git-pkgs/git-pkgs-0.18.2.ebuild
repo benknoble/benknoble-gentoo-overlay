@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.25.7"
+BDEPEND=">=dev-lang/go-1.25.12"
 
 IUSE="+doc"
 
@@ -39,7 +39,7 @@ src_compile() {
 	local ldflags=(
 		-s -w
 		-X github.com/git-pkgs/git-pkgs/cmd.version="${PV}"
-		-X github.com/git-pkgs/git-pkgs/cmd.commit=dcad319db70e86241f365873b1bf7eb0da4b10e4
+		-X github.com/git-pkgs/git-pkgs/cmd.commit=5d07a00bace682d7eda71738e172d7a0ad7fb0b3
 		-X github.com/git-pkgs/git-pkgs/cmd.date="$(date --rfc-3339=seconds -u | sed 's/ /T/;s/+00:00/Z/')"
 	)
 
