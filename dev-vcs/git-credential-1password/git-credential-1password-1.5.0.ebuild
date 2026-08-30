@@ -13,7 +13,7 @@ KEYWORDS="~amd64"
 
 DEPEND=">=app-admin/op-cli-bin-2.32.0"
 RDEPEND="${DEPEND}"
-BDEPEND=">=dev-lang/go-1.25.0"
+BDEPEND=">=dev-lang/go-1.26.0"
 
 inherit go-module
 
